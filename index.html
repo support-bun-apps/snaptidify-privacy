@@ -5,58 +5,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhotoClean Privacy Policy</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { text-align: center; font-size: 1.5em; margin-bottom: 1em; }
-        h2 { font-size: 1.2em; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-top: 30px; }
-        p { margin-bottom: 15px; }
-        .lang-en { color: #666; font-size: 0.9em; margin-top: -10px; margin-bottom: 20px; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+            color: #333;
+            background: #fff;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 0.4em;
+        }
+        h2 {
+            font-size: 1.15em;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-top: 36px;
+        }
+        p { margin-bottom: 14px; }
+        .lang-en {
+            color: #555;
+            font-size: 0.9em;
+            margin-top: -8px;
+            margin-bottom: 22px;
+        }
         a { color: #1E88E5; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        ul { margin: 0 0 16px 0; padding-left: 1.6em; }
+        li { margin-bottom: 6px; }
+        .note {
+            background: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px 16px;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+        .date-line {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+        }
     </style>
 </head>
 <body>
 
-    <h1>PhotoClean プライバシーポリシー<br><span style="font-size: 0.8em; color: #666;">Privacy Policy</span></h1>
+    <h1>
+        PhotoClean プライバシーポリシー<br>
+        <span style="font-size: 0.75em; color: #666;">Privacy Policy</span>
+    </h1>
 
-    <p>本プライバシーポリシーは、スマートフォン向けアプリ「PhotoClean」（以下、「本アプリ」）におけるユーザー情報の取り扱いについて説明するものです。</p>
-    <p class="lang-en">This privacy policy explains how user information is handled in the smartphone application "PhotoClean" (hereinafter referred to as "this App").</p>
+    <p style="text-align:center; color:#666; font-size:0.9em;">
+        最終更新日 / Last updated: 2026年5月21日
+    </p>
 
-    <h2>1. 個人情報の収集と利用について / Collection and Use of Personal Information</h2>
-    <p>本アプリは、端末内の写真の表示および整理（フォルダ移動・削除）を行うために、デバイスのストレージ（写真データ）へのアクセス権限を要求します。<br>
-    ただし、これらの写真データや個人情報が、開発者のサーバーや第三者へ送信・収集されることは一切ありません。すべての画像処理と整理は、ユーザーのデバイス（端末）内部で完全にオフラインで行われます。</p>
-    <p class="lang-en">This App requests access to your device's storage (photo data) to display and organize (move to folders, delete) photos on your device. However, these photo data and personal information are NEVER transmitted to or collected by the developer's servers or any third parties. All image processing and organization are performed completely offline, locally on the user's device.</p>
+    <p>
+        本プライバシーポリシーは、スマートフォン向けアプリ「PhotoClean」（以下、「本アプリ」）における
+        ユーザー情報の取り扱いについて説明するものです。本アプリをご利用になる前に、必ずお読みください。
+    </p>
+    <p class="lang-en">
+        This privacy policy explains how user information is handled in the smartphone application "PhotoClean"
+        (hereinafter "this App"). Please read this policy carefully before using the App.
+    </p>
 
-    <h2>2. 外部ツールの利用について / Use of Third-Party Tools</h2>
-    <p><strong>【広告配信について】</strong><br>
-    本アプリは、広告配信を目的として「Google AdMob」を使用しています。広告配信プロセスにおいて、識別情報（広告ID等）や匿名化されたトラフィックデータが収集される場合があります。収集されるデータについては、以下のGoogleのプライバシーポリシーをご確認ください。<br>
-    ・<a href="https://policies.google.com/privacy" target="_blank">Google プライバシーポリシー</a></p>
-    <p class="lang-en"><strong>[About Advertisement]</strong><br>
-    This app uses "Google AdMob" to provide advertisements. In the process of serving ads, identifiers (such as Advertising IDs) and anonymized traffic data may be collected. For details on the data collected, please refer to Google's privacy policy.<br>
-    - <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
-    
-    <br>
-    <p><strong>【その他のライブラリ】</strong><br>
-    また、本アプリの品質向上や動作のために以下のオープンソースライブラリを使用していますが、これらがユーザーの個人情報を収集することはありません。</p>
-    <p class="lang-en"><strong>[Other Libraries]</strong><br>
-    This App also uses the following open-source libraries to improve quality and performance, but they do not collect user personal information.</p>
+    <!-- ======================================================= -->
+    <h2>1. 収集する情報について / Information We Collect</h2>
+
+    <p><strong>【デバイス上の写真・メディアデータ】</strong><br>
+    本アプリは、写真の表示・整理（フォルダへの移動・削除）を実現するために、以下のシステム権限を要求します。
+    これらのデータは端末内でのみ処理され、外部サーバーや第三者へ送信・収集されることは一切ありません。
+    </p>
     <ul>
-        <li>Jetpack Compose</li>
-        <li>Coil</li>
-        <li>Koin</li>
-        <li>Room</li>
+        <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：写真の読み込みと表示に使用します。</li>
+        <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14以降の選択的アクセスに対応するために使用します。</li>
+        <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれた撮影位置情報を保持したまま処理するために使用します。</li>
+        <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐための任意の権限です。この権限はユーザーが設定画面から明示的に許可した場合にのみ有効となります。</li>
+    </ul>
+    <p class="lang-en">
+        <strong>[Device Photos &amp; Media Data]</strong><br>
+        This App requests the following system permissions to display and organize photos (move to folders, delete).
+        These data are processed only on-device and are NEVER transmitted to external servers or third parties.
+    </p>
+    <ul class="lang-en" style="color:#555; font-size:0.9em;">
+        <li><strong>Photo/image access</strong> (READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE): Used to read and display photos.</li>
+        <li><strong>Partial photo access</strong> (READ_MEDIA_VISUAL_USER_SELECTED): For selective access on Android 14+.</li>
+        <li><strong>Media location access</strong> (ACCESS_MEDIA_LOCATION): To preserve GPS metadata embedded in photos during processing.</li>
+        <li><strong>Media management</strong> (MANAGE_MEDIA): An optional permission that prevents per-photo system confirmation dialogs during sorting. It is only active when explicitly granted by the user from the in-app settings screen.</li>
     </ul>
 
-    <h2>3. プライバシーポリシーの変更 / Changes to This Privacy Policy</h2>
-    <p>本ポリシーは、法令の変更やアプリのアップデートに伴い、予告なく変更される場合があります。変更後のプライバシーポリシーは、本ページに掲載された時点から効力を生じるものとします。</p>
-    <p class="lang-en">This policy may be updated without prior notice due to changes in laws or app updates. The updated privacy policy will take effect from the time it is posted on this page.</p>
+    <p><strong>【アプリ内設定データ】</strong><br>
+    フォルダ情報、自動削除設定、チュートリアル進捗などの設定情報は、端末内のローカルストレージ（SharedPreferences / Room データベース）に保存されます。
+    これらのデータが外部へ送信されることはありません。
+    </p>
+    <p class="lang-en">
+        <strong>[In-App Settings Data]</strong><br>
+        Settings such as folder information, auto-delete preferences, and tutorial progress are stored in local storage
+        on your device (SharedPreferences / Room database). This data is never transmitted externally.
+    </p>
 
-    <h2>4. お問い合わせ先 / Contact Information</h2>
-    <p>本アプリのプライバシーポリシーに関するお問い合わせは、下記までご連絡ください。</p>
-    <p class="lang-en">If you have any questions about this privacy policy, please contact:</p>
-    <p><strong>Email:</strong> support.bun.apps@gmail.com</p>
+    <!-- ======================================================= -->
+    <h2>2. 広告サービスについて / Advertising Services</h2>
 
-    <br>
-    <p><strong>制定日 / Effective Date:</strong> 2026年5月6日</p>
+    <p><strong>【Google AdMob の利用】</strong><br>
+    本アプリは、広告配信のために <strong>Google AdMob</strong>（提供：Google LLC）を使用しています。
+    AdMob は、広告の最適化・配信・不正防止のために以下の情報を収集する場合があります。
+    </p>
+    <ul>
+        <li>広告識別子（Advertising ID / IDFA）</li>
+        <li>IPアドレス（おおよその位置情報の推定に使用）</li>
+        <li>デバイス情報（OS バージョン、機種名など）</li>
+        <li>アプリの利用状況・インタラクションデータ（広告のクリック・表示状況）</li>
+    </ul>
+    <p>
+        これらのデータの収集・利用については、Google のプライバシーポリシーが適用されます：
+        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    </p>
+    <p>
+        広告識別子はユーザーがいつでもリセットまたは広告のパーソナライズを無効化できます。
+        Android の場合は「設定」→「プライバシー」→「広告」からご確認ください。
+    </p>
+    <p class="lang-en">
+        <strong>[Google AdMob]</strong><br>
+        This App uses <strong>Google AdMob</strong> (provided by Google LLC) for advertising. AdMob may collect the
+        following information for ad optimization, delivery, and fraud prevention:
+    </p>
+    <ul class="lang-en" style="color:#555; font-size:0.9em;">
+        <li>Advertising identifiers (Advertising ID / IDFA)</li>
+        <li>IP address (used to estimate approximate location)</li>
+        <li>Device information (OS version, device model, etc.)</li>
+        <li>App usage and interaction data (ad clicks and impressions)</li>
+    </ul>
+    <p class="lang-en">
+        Google's Privacy Policy applies to the collection and use of this data:
+        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
+        You can reset your Advertising ID or opt out of ad personalization at any time via
+        Android Settings → Privacy → Ads.
+    </p>
+
+    <p><strong>【User Messaging Platform（UMP）による同意管理】</strong><br>
+    本アプリは、欧州経済領域（EEA）・英国・スイスにお住まいのユーザーに対して、
+    Google の <strong>User Messaging Platform（UMP）</strong>を通じて広告に関する同意を取得しています。
+    同意は初回起動時に確認され、アプリの「設定」→「広告の同意設定」からいつでも変更できます。
+    同意が得られない場合、パーソナライズ広告は表示されません。
+    </p>
+    <p class="lang-en">
+        <strong>[Consent Management via User Messaging Platform (UMP)]</strong><br>
+        For users in the European Economic Area (EEA), UK, and Switzerland, this App collects consent for advertising
+        through Google's <strong>User Messaging Platform (UMP)</strong>. Consent is requested at first launch and can
+        be updated at any time via Settings → "Ad Consent Settings". If consent is not granted, personalized ads will
+        not be shown.
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>3. 使用するオープンソースライブラリ / Open-Source Libraries Used</h2>
+
+    <p>
+        本アプリは以下のオープンソースライブラリを使用していますが、これらはユーザーの個人情報を収集しません。
+        いずれも Apache License 2.0 またはそれぞれのオープンソースライセンスの下で提供されています。
+    </p>
+    <p class="lang-en">
+        This App uses the following open-source libraries, none of which collect personal information.
+        All are provided under the Apache License 2.0 or their respective open-source licenses.
+    </p>
+    <ul>
+        <li><strong>Jetpack Compose</strong> – Android UI フレームワーク</li>
+        <li><strong>Coil</strong> – 画像読み込みライブラリ</li>
+        <li><strong>Koin</strong> – 依存性注入フレームワーク</li>
+        <li><strong>Room</strong> – ローカルデータベース</li>
+    </ul>
+
+    <!-- ======================================================= -->
+    <h2>4. データの保持期間 / Data Retention</h2>
+
+    <p>
+        本アプリがローカルに保存するデータ（フォルダ情報・設定・ゴミ箱の状態管理情報など）は、
+        アプリをアンインストールするまで端末に保持されます。
+        アンインストール後はすべての設定データが削除されますが、写真ファイル自体は Android のメディアストアに残ります。
+    </p>
+    <p class="lang-en">
+        Data stored locally by this App (folder names, settings, trash status, etc.) is retained on your device
+        until the App is uninstalled. After uninstallation, all settings data is deleted, but photo files themselves
+        remain in the Android MediaStore.
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>5. 児童のプライバシー / Children's Privacy</h2>
+
+    <p>
+        本アプリは13歳未満（日本においては13歳未満）の子供を対象としておらず、
+        意図的に子供の個人情報を収集することはありません。
+        万が一、保護者の方が13歳未満のお子様が本アプリを使用していることにお気づきの場合は、
+        下記の連絡先までご連絡ください。
+    </p>
+    <p class="lang-en">
+        This App is not directed at children under the age of 13 and does not knowingly collect personal information
+        from children under 13. If a parent or guardian believes their child under 13 has used this App, please
+        contact us at the address below.
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>6. ユーザーの権利（GDPRへの対応）/ Your Rights (GDPR)</h2>
+
+    <p>
+        欧州経済領域（EEA）・英国にお住まいのユーザーは、GDPR に基づき以下の権利を有します。
+    </p>
+    <ul>
+        <li><strong>アクセス権</strong>：収集された個人データの開示を求める権利</li>
+        <li><strong>削除権</strong>：個人データの削除を求める権利（いわゆる「忘れられる権利」）</li>
+        <li><strong>処理の制限権</strong>：特定条件下で個人データの処理を制限する権利</li>
+        <li><strong>同意の撤回権</strong>：広告同意はアプリ設定画面からいつでも撤回可能です</li>
+    </ul>
+    <p>
+        本アプリ自体が個人情報を外部に送信することはありませんが、AdMob に関するデータについては
+        <a href="https://policies.google.com/privacy" target="_blank">Google のプライバシーポリシー</a>
+        および <a href="https://adssettings.google.com/" target="_blank">Google 広告設定</a> をご参照ください。
+    </p>
+    <p class="lang-en">
+        Users in the EEA and UK have the following rights under the GDPR:
+    </p>
+    <ul class="lang-en" style="color:#555; font-size:0.9em;">
+        <li><strong>Right of access</strong>: Request disclosure of collected personal data.</li>
+        <li><strong>Right to erasure</strong>: Request deletion of personal data ("right to be forgotten").</li>
+        <li><strong>Right to restriction</strong>: Restrict processing of personal data under certain conditions.</li>
+        <li><strong>Right to withdraw consent</strong>: Ad consent can be withdrawn at any time from in-app Settings.</li>
+    </ul>
+    <p class="lang-en">
+        As this App itself does not transmit personal data externally, for data related to AdMob please refer to
+        <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> and
+        <a href="https://adssettings.google.com/" target="_blank">Google Ad Settings</a>.
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>7. プライバシーポリシーの変更 / Changes to This Policy</h2>
+
+    <p>
+        本ポリシーは、法令の変更やアプリのアップデートに伴い、予告なく変更される場合があります。
+        重要な変更がある場合は、アプリ内またはこのページへの掲載によりお知らせします。
+        変更後のプライバシーポリシーは、本ページに掲載された時点から効力を生じるものとします。
+    </p>
+    <p class="lang-en">
+        This policy may be updated without prior notice due to changes in laws or app updates.
+        For significant changes, we will notify users via the App or this page.
+        The updated policy takes effect from the time it is posted on this page.
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>8. お問い合わせ先 / Contact</h2>
+
+    <p>
+        本プライバシーポリシーに関するご質問・ご意見は、下記までお気軽にご連絡ください。
+    </p>
+    <p class="lang-en">
+        If you have any questions or concerns about this privacy policy, please contact us:
+    </p>
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a>
+    </p>
+
+    <div class="date-line">
+        <p>
+            <strong>初版制定日 / First established:</strong> 2026年5月6日<br>
+            <strong>最終更新日 / Last updated:</strong> 2026年5月21日
+        </p>
+    </div>
 
 </body>
 </html>
