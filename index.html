@@ -58,7 +58,7 @@
     </h1>
 
     <p style="text-align:center; color:#666; font-size:0.9em;">
-        最終更新日 / Last updated: 2026年5月21日
+        最終更新日 / Last updated: 2026年5月23日
     </p>
 
     <p>
@@ -80,8 +80,8 @@
     <ul>
         <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：写真の読み込みと表示に使用します。</li>
         <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14以降の選択的アクセスに対応するために使用します。</li>
-        <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれた撮影位置情報を保持したまま処理するために使用します。</li>
-        <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐための任意の権限です。この権限はユーザーが設定画面から明示的に許可した場合にのみ有効となります。</li>
+        <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：位置情報やGPSデータを収集・取得・送信するために使用するものではありません。Androidの公式仕様（Android Developers公式ドキュメント）により、MANAGE_MEDIAと組み合わせて一括写真整理をユーザー確認ダイアログなしで実行するために必要な技術的要件として宣言しています。本アプリが位置情報・GPSデータを収集・読み取り・利用・送信することは一切ありません。</li>
+        <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：写真1枚ごとにシステム確認ダイアログが表示されることを防ぎ、一括整理をスムーズに行うための特別な権限です。この権限はユーザーが設定画面から明示的に許可した場合にのみ有効となり、強制的に付与されることはありません。</li>
     </ul>
     <p class="lang-en">
         <strong>[Device Photos &amp; Media Data]</strong><br>
@@ -91,11 +91,19 @@
     <ul class="lang-en" style="color:#555; font-size:0.9em;">
         <li><strong>Photo/image access</strong> (READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE): Used to read and display photos.</li>
         <li><strong>Partial photo access</strong> (READ_MEDIA_VISUAL_USER_SELECTED): For selective access on Android 14+.</li>
-        <li><strong>Media location access</strong> (ACCESS_MEDIA_LOCATION): To preserve GPS metadata embedded in photos during processing.</li>
-        <li><strong>Media management</strong> (MANAGE_MEDIA): An optional permission that prevents per-photo system confirmation dialogs during sorting. It is only active when explicitly granted by the user from the in-app settings screen.</li>
+        <li><strong>Media location access</strong> (ACCESS_MEDIA_LOCATION): This permission is NOT used to access, read, collect, or transmit any GPS or location data. Per Android's official documentation (Android Developers), this permission must be declared alongside MANAGE_MEDIA to allow batch photo operations (createWriteRequest()/update()) to proceed without showing a per-file confirmation dialog to the user. The App does NOT access, collect, use, or transmit any GPS/EXIF location data whatsoever. Reference: <a href="https://developer.android.com/training/data-storage/shared/media" target="_blank">developer.android.com</a></li>
+        <li><strong>Media management</strong> (MANAGE_MEDIA): A special permission that prevents per-photo system confirmation dialogs during batch sorting operations. It is only active when explicitly granted by the user from the in-app settings screen and is never forced.</li>
     </ul>
 
-    <p><strong>【アプリ内設定データ】</strong><br>
+    <div class="note">
+        <strong>📌 ストア審査・Data Safety 申告向け補足：</strong><br>
+        本アプリは <code>ACCESS_MEDIA_LOCATION</code> 権限を宣言していますが、ユーザーの位置情報・GPSデータを収集・利用・送信する目的では一切ありません。
+        Androidの公式ドキュメント（<a href="https://developer.android.com/training/data-storage/shared/media" target="_blank">developer.android.com</a>）が明示するとおり、
+        <code>MANAGE_MEDIA</code> と組み合わせてユーザー確認ダイアログなしの一括写真整理を実現するために必要な技術的要件として宣言しています。<br>
+        <em>This App declares ACCESS_MEDIA_LOCATION not to access location data, but because Android's official documentation requires it alongside MANAGE_MEDIA to allow batch photo operations without per-file confirmation dialogs. No GPS/location data is collected, read, or transmitted.</em>
+    </div>
+
+
     フォルダ情報、自動削除設定、チュートリアル進捗などの設定情報は、端末内のローカルストレージ（SharedPreferences / Room データベース）に保存されます。
     これらのデータが外部へ送信されることはありません。
     </p>
@@ -115,7 +123,8 @@
     <ul>
         <li>広告識別子（Advertising ID / IDFA）</li>
         <li>IPアドレス（おおよその位置情報の推定に使用）</li>
-        <li>デバイス情報（OS バージョン、機種名など）</li>
+        <li>デバイス情報（OS バージョン、機種名、端末またはその他の識別子など）</li>
+        <li>ネットワーク情報（通信キャリア、接続の種類など）</li>
         <li>アプリの利用状況・インタラクションデータ（広告のクリック・表示状況）</li>
     </ul>
     <p>
@@ -134,7 +143,8 @@
     <ul class="lang-en" style="color:#555; font-size:0.9em;">
         <li>Advertising identifiers (Advertising ID / IDFA)</li>
         <li>IP address (used to estimate approximate location)</li>
-        <li>Device information (OS version, device model, etc.)</li>
+        <li>Device information (OS version, device model, device or other identifiers, etc.)</li>
+        <li>Network information (carrier, connection type, etc.)</li>
         <li>App usage and interaction data (ad clicks and impressions)</li>
     </ul>
     <p class="lang-en">
@@ -202,7 +212,9 @@
     <p class="lang-en">
         This App is not directed at children under the age of 13 and does not knowingly collect personal information
         from children under 13. If a parent or guardian believes their child under 13 has used this App, please
-        contact us at the address below.
+        contact us at the address below.<br>
+        <strong>For users in the EEA/UK (GDPR):</strong> If you are under 16 years of age, please use this App only
+        with the consent of a parent or legal guardian.
     </p>
 
     <!-- ======================================================= -->
@@ -268,7 +280,7 @@
     <div class="date-line">
         <p>
             <strong>初版制定日 / First established:</strong> 2026年5月6日<br>
-            <strong>最終更新日 / Last updated:</strong> 2026年5月21日
+            <strong>最終更新日 / Last updated:</strong> 2026年5月23日
         </p>
     </div>
 
