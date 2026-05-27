@@ -58,7 +58,7 @@
     </h1>
 
     <p style="text-align:center; color:#666; font-size:0.9em;">
-        最終更新日 / Last updated: 2026年5月23日
+        最終更新日 / Last updated: 2026年5月27日
     </p>
 
     <p>
@@ -75,42 +75,38 @@
 
     <p><strong>【デバイス上の写真・メディアデータ】</strong><br>
     本アプリは、写真の表示・整理（フォルダへの移動・削除）を実現するために、以下のシステム権限を要求します。
-    これらのデータは端末内でのみ処理され、外部サーバーや第三者へ送信・収集されることは一切ありません。
+    これらのデータは端末内でのみ処理され、<strong>開発者のサーバーや第三者へ送信・収集されることは一切ありません。</strong>
     </p>
     <ul>
         <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：写真の読み込みと表示に使用します。</li>
         <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14以降の選択的アクセスに対応するために使用します。</li>
-        <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：位置情報やGPSデータを収集・取得・送信するために使用するものではありません。Androidの公式仕様（Android Developers公式ドキュメント）により、MANAGE_MEDIAと組み合わせて一括写真整理をユーザー確認ダイアログなしで実行するために必要な技術的要件として宣言しています。本アプリが位置情報・GPSデータを収集・読み取り・利用・送信することは一切ありません。</li>
-        <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：写真1枚ごとにシステム確認ダイアログが表示されることを防ぎ、一括整理をスムーズに行うための特別な権限です。この権限はユーザーが設定画面から明示的に許可した場合にのみ有効となり、強制的に付与されることはありません。</li>
+        <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれた撮影位置情報を保持したまま処理するために使用します。</li>
+        <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐための任意の権限です。この権限はユーザーが設定画面から明示的に許可した場合にのみ有効となります。</li>
     </ul>
     <p class="lang-en">
         <strong>[Device Photos &amp; Media Data]</strong><br>
         This App requests the following system permissions to display and organize photos (move to folders, delete).
-        These data are processed only on-device and are NEVER transmitted to external servers or third parties.
+        These data are processed only on-device and are <strong>NEVER transmitted to the developer's servers or third parties.</strong>
     </p>
     <ul class="lang-en" style="color:#555; font-size:0.9em;">
         <li><strong>Photo/image access</strong> (READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE): Used to read and display photos.</li>
         <li><strong>Partial photo access</strong> (READ_MEDIA_VISUAL_USER_SELECTED): For selective access on Android 14+.</li>
-        <li><strong>Media location access</strong> (ACCESS_MEDIA_LOCATION): This permission is NOT used to access, read, collect, or transmit any GPS or location data. Per Android's official documentation (Android Developers), this permission must be declared alongside MANAGE_MEDIA to allow batch photo operations (createWriteRequest()/update()) to proceed without showing a per-file confirmation dialog to the user. The App does NOT access, collect, use, or transmit any GPS/EXIF location data whatsoever. Reference: <a href="https://developer.android.com/training/data-storage/shared/media" target="_blank">developer.android.com</a></li>
-        <li><strong>Media management</strong> (MANAGE_MEDIA): A special permission that prevents per-photo system confirmation dialogs during batch sorting operations. It is only active when explicitly granted by the user from the in-app settings screen and is never forced.</li>
+        <li><strong>Media location access</strong> (ACCESS_MEDIA_LOCATION): To preserve GPS metadata embedded in photos during processing.</li>
+        <li><strong>Media management</strong> (MANAGE_MEDIA): An optional permission that prevents per-photo system confirmation dialogs during sorting. It is only active when explicitly granted by the user from the in-app settings screen.</li>
     </ul>
 
-    <div class="note">
-        <strong>📌 ストア審査・Data Safety 申告向け補足：</strong><br>
-        本アプリは <code>ACCESS_MEDIA_LOCATION</code> 権限を宣言していますが、ユーザーの位置情報・GPSデータを収集・利用・送信する目的では一切ありません。
-        Androidの公式ドキュメント（<a href="https://developer.android.com/training/data-storage/shared/media" target="_blank">developer.android.com</a>）が明示するとおり、
-        <code>MANAGE_MEDIA</code> と組み合わせてユーザー確認ダイアログなしの一括写真整理を実現するために必要な技術的要件として宣言しています。<br>
-        <em>This App declares ACCESS_MEDIA_LOCATION not to access location data, but because Android's official documentation requires it alongside MANAGE_MEDIA to allow batch photo operations without per-file confirmation dialogs. No GPS/location data is collected, read, or transmitted.</em>
-    </div>
-
-
+    <p><strong>【アプリ内設定データ】</strong><br>
     フォルダ情報、自動削除設定、チュートリアル進捗などの設定情報は、端末内のローカルストレージ（SharedPreferences / Room データベース）に保存されます。
-    これらのデータが外部へ送信されることはありません。
+    これらのデータが<strong>開発者のサーバーへ送信されることはありません。</strong>
+    なお、お使いのデバイスでGoogleバックアップが有効な場合、これらの設定データはAndroidの標準機能（Auto Backup）によって
+    ユーザーご自身のGoogleアカウントへバックアップされることがあります（詳細は「3. Android Auto Backup」をご参照ください）。
     </p>
     <p class="lang-en">
         <strong>[In-App Settings Data]</strong><br>
         Settings such as folder information, auto-delete preferences, and tutorial progress are stored in local storage
-        on your device (SharedPreferences / Room database). This data is never transmitted externally.
+        on your device (SharedPreferences / Room database). This data is <strong>never transmitted to the developer's servers.</strong>
+        If Google Backup is enabled on your device, these settings may be backed up to your own Google Account
+        via Android's standard Auto Backup feature (see Section 3 for details).
     </p>
 
     <!-- ======================================================= -->
@@ -123,8 +119,7 @@
     <ul>
         <li>広告識別子（Advertising ID / IDFA）</li>
         <li>IPアドレス（おおよその位置情報の推定に使用）</li>
-        <li>デバイス情報（OS バージョン、機種名、端末またはその他の識別子など）</li>
-        <li>ネットワーク情報（通信キャリア、接続の種類など）</li>
+        <li>デバイス情報（OS バージョン、機種名など）</li>
         <li>アプリの利用状況・インタラクションデータ（広告のクリック・表示状況）</li>
     </ul>
     <p>
@@ -143,8 +138,7 @@
     <ul class="lang-en" style="color:#555; font-size:0.9em;">
         <li>Advertising identifiers (Advertising ID / IDFA)</li>
         <li>IP address (used to estimate approximate location)</li>
-        <li>Device information (OS version, device model, device or other identifiers, etc.)</li>
-        <li>Network information (carrier, connection type, etc.)</li>
+        <li>Device information (OS version, device model, etc.)</li>
         <li>App usage and interaction data (ad clicks and impressions)</li>
     </ul>
     <p class="lang-en">
@@ -169,7 +163,62 @@
     </p>
 
     <!-- ======================================================= -->
-    <h2>3. 使用するオープンソースライブラリ / Open-Source Libraries Used</h2>
+    <h2>3. Android Auto Backup（Googleアカウントへのバックアップ）/ Android Auto Backup</h2>
+
+    <p><strong>【バックアップの仕組み】</strong><br>
+    本アプリは、Android の標準機能である <strong>Auto Backup</strong> に対応しています。
+    お使いのデバイスで「Googleへのバックアップ」が有効な場合、以下のデータがユーザーご自身の
+    <strong>Google アカウント（Google ドライブ）</strong>に自動的にバックアップされます。
+    </p>
+    <ul>
+        <li>フォルダ名・フォルダの色・並び順</li>
+        <li>自動削除の設定日数</li>
+        <li>サクサク仕分けの ON/OFF 設定</li>
+        <li>チュートリアルの完了状態</li>
+    </ul>
+
+    <div class="note">
+        このバックアップデータは<strong>ユーザーご自身の Google アカウントに保存されるもの</strong>であり、
+        開発者（bunapps）はこのデータに一切アクセスできません。
+        機種変更後に新しい端末でアプリを再インストールすると、これらの設定が自動的に復元されます。
+    </div>
+
+    <p><strong>【バックアップを無効にする場合】</strong><br>
+    Auto Backup を利用したくない場合は、Android の「設定」→「システム」→「バックアップ」から
+    「Google へのバックアップ」をオフにするか、アプリ単位でバックアップ対象から除外することができます。
+    バックアップデータの管理・削除については
+    <a href="https://drive.google.com" target="_blank">Google ドライブ</a> からも行えます。
+    </p>
+    <p>
+        バックアップデータの取り扱いは Google のプライバシーポリシーに従います：
+        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    </p>
+
+    <p class="lang-en">
+        <strong>[How Auto Backup Works]</strong><br>
+        This App supports Android's standard <strong>Auto Backup</strong> feature.
+        If "Backup to Google" is enabled on your device, the following data will be automatically backed up
+        to <strong>your own Google Account (Google Drive)</strong>:
+    </p>
+    <ul class="lang-en" style="color:#555; font-size:0.9em;">
+        <li>Folder names, colors, and sort order</li>
+        <li>Auto-delete setting (number of days)</li>
+        <li>Continuous sorting ON/OFF setting</li>
+        <li>Tutorial completion status</li>
+    </ul>
+    <p class="lang-en">
+        This backup data is stored <strong>in your own Google Account</strong> — the developer (bunapps) has
+        no access to it. When you reinstall the App on a new device, these settings will be automatically restored.<br><br>
+        <strong>[Disabling Auto Backup]</strong><br>
+        To opt out, go to Android Settings → System → Backup and turn off "Back up to Google," or exclude this App
+        individually. Backup data can also be managed or deleted via
+        <a href="https://drive.google.com" target="_blank">Google Drive</a>.<br>
+        Google's Privacy Policy applies to backup data:
+        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>4. 使用するオープンソースライブラリ / Open-Source Libraries Used</h2>
 
     <p>
         本アプリは以下のオープンソースライブラリを使用していますが、これらはユーザーの個人情報を収集しません。
@@ -187,21 +236,31 @@
     </ul>
 
     <!-- ======================================================= -->
-    <h2>4. データの保持期間 / Data Retention</h2>
+    <h2>5. データの保持期間 / Data Retention</h2>
 
     <p>
         本アプリがローカルに保存するデータ（フォルダ情報・設定・ゴミ箱の状態管理情報など）は、
         アプリをアンインストールするまで端末に保持されます。
-        アンインストール後はすべての設定データが削除されますが、写真ファイル自体は Android のメディアストアに残ります。
+        アンインストール後はすべての設定データが端末から削除されますが、写真ファイル自体は Android のメディアストアに残ります。
+    </p>
+    <p>
+        なお、Auto Backup が有効な場合、設定データはアンインストール後もユーザーの Google アカウント上に
+        一定期間保持されることがあります。Google アカウント上のバックアップデータを削除するには、
+        Google ドライブの「バックアップ」セクションからアプリデータを削除してください。
     </p>
     <p class="lang-en">
         Data stored locally by this App (folder names, settings, trash status, etc.) is retained on your device
-        until the App is uninstalled. After uninstallation, all settings data is deleted, but photo files themselves
-        remain in the Android MediaStore.
+        until the App is uninstalled. After uninstallation, all settings data is deleted from the device, but photo
+        files themselves remain in the Android MediaStore.
+    </p>
+    <p class="lang-en">
+        If Auto Backup is enabled, settings data may remain in your Google Account for a period after uninstallation.
+        To delete backup data from your Google Account, go to the "Backups" section in Google Drive and remove
+        the app's backup data.
     </p>
 
     <!-- ======================================================= -->
-    <h2>5. 児童のプライバシー / Children's Privacy</h2>
+    <h2>6. 児童のプライバシー / Children's Privacy</h2>
 
     <p>
         本アプリは13歳未満（日本においては13歳未満）の子供を対象としておらず、
@@ -212,13 +271,11 @@
     <p class="lang-en">
         This App is not directed at children under the age of 13 and does not knowingly collect personal information
         from children under 13. If a parent or guardian believes their child under 13 has used this App, please
-        contact us at the address below.<br>
-        <strong>For users in the EEA/UK (GDPR):</strong> If you are under 16 years of age, please use this App only
-        with the consent of a parent or legal guardian.
+        contact us at the address below.
     </p>
 
     <!-- ======================================================= -->
-    <h2>6. ユーザーの権利（GDPRへの対応）/ Your Rights (GDPR)</h2>
+    <h2>7. ユーザーの権利（GDPRへの対応）/ Your Rights (GDPR)</h2>
 
     <p>
         欧州経済領域（EEA）・英国にお住まいのユーザーは、GDPR に基づき以下の権利を有します。
@@ -230,7 +287,7 @@
         <li><strong>同意の撤回権</strong>：広告同意はアプリ設定画面からいつでも撤回可能です</li>
     </ul>
     <p>
-        本アプリ自体が個人情報を外部に送信することはありませんが、AdMob に関するデータについては
+        本アプリ自体が個人情報を開発者サーバーへ送信することはありませんが、AdMob に関するデータについては
         <a href="https://policies.google.com/privacy" target="_blank">Google のプライバシーポリシー</a>
         および <a href="https://adssettings.google.com/" target="_blank">Google 広告設定</a> をご参照ください。
     </p>
@@ -244,13 +301,13 @@
         <li><strong>Right to withdraw consent</strong>: Ad consent can be withdrawn at any time from in-app Settings.</li>
     </ul>
     <p class="lang-en">
-        As this App itself does not transmit personal data externally, for data related to AdMob please refer to
+        As this App itself does not transmit personal data to the developer's servers, for data related to AdMob please refer to
         <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> and
         <a href="https://adssettings.google.com/" target="_blank">Google Ad Settings</a>.
     </p>
 
     <!-- ======================================================= -->
-    <h2>7. プライバシーポリシーの変更 / Changes to This Policy</h2>
+    <h2>8. プライバシーポリシーの変更 / Changes to This Policy</h2>
 
     <p>
         本ポリシーは、法令の変更やアプリのアップデートに伴い、予告なく変更される場合があります。
@@ -264,7 +321,7 @@
     </p>
 
     <!-- ======================================================= -->
-    <h2>8. お問い合わせ先 / Contact</h2>
+    <h2>9. お問い合わせ先 / Contact</h2>
 
     <p>
         本プライバシーポリシーに関するご質問・ご意見は、下記までお気軽にご連絡ください。
@@ -280,10 +337,9 @@
     <div class="date-line">
         <p>
             <strong>初版制定日 / First established:</strong> 2026年5月6日<br>
-            <strong>最終更新日 / Last updated:</strong> 2026年5月23日
+            <strong>最終更新日 / Last updated:</strong> 2026年5月27日
         </p>
     </div>
 
 </body>
 </html>
-　
