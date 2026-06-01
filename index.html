@@ -1,345 +1,230 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>snaptidify Privacy Policy</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            line-height: 1.8;
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 24px 20px 60px;
-            color: #333;
-            background: #fff;
-        }
-        h1 {
-            text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 0.4em;
-        }
-        h2 {
-            font-size: 1.15em;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 5px;
-            margin-top: 36px;
-        }
-        p { margin-bottom: 14px; }
-        .lang-en {
-            color: #555;
-            font-size: 0.9em;
-            margin-top: -8px;
-            margin-bottom: 22px;
-        }
-        a { color: #1E88E5; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul { margin: 0 0 16px 0; padding-left: 1.6em; }
-        li { margin-bottom: 6px; }
-        .note {
-            background: #f9f9f9;
-            border-left: 4px solid #4CAF50;
-            padding: 10px 16px;
-            margin: 16px 0;
-            font-size: 0.95em;
-        }
-        .date-line {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snaptidify – プライバシーポリシー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:   #4CAF50;
+    --green-d: #388E3C;
+    --green-l: #E8F5E9;
+    --ink:     #1a1a1a;
+    --sub:     #555;
+    --rule:    #e0e0e0;
+    --bg:      #fafafa;
+    --card:    #ffffff;
+    --radius:  10px;
+    --max:     820px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+  header {
+    background: var(--card);
+    border-bottom: 3px solid var(--green);
+    padding: 28px 24px;
+  }
+  .header-inner { max-width: var(--max); margin: 0 auto; }
+  .app-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5em;
+    color: var(--green);
+    margin-bottom: 4px;
+  }
+  .app-name span {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .55em;
+    font-weight: 400;
+    color: var(--sub);
+    margin-left: 8px;
+  }
+  main {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  .doc-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.9em;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .doc-title-en { font-size: .8em; color: var(--sub); margin-bottom: 6px; }
+  .doc-meta {
+    font-size: .82em;
+    color: var(--sub);
+    margin-bottom: 36px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section { margin-bottom: 40px; }
+  .section h2 {
+    font-size: 1.05em;
+    font-weight: 700;
+    color: var(--green-d);
+    border-left: 4px solid var(--green);
+    padding-left: 12px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .section h3 { font-size: .95em; font-weight: 700; margin: 16px 0 8px; }
+  .section p { margin-bottom: 12px; }
+  .section ul, .section ol { padding-left: 1.6em; margin-bottom: 12px; }
+  .section li { margin-bottom: 6px; }
+  .en { color: var(--sub); font-size: .87em; margin-top: -6px; margin-bottom: 16px; }
+  .note {
+    background: var(--green-l);
+    border-left: 4px solid var(--green);
+    padding: 12px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 14px 0;
+    font-size: .92em;
+  }
+  a { color: #1565C0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .doc-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: .82em;
+    color: var(--sub);
+  }
+</style>
 </head>
 <body>
+<header>
+  <div class="header-inner">
+    <div class="app-name">Snaptidify <span>by BunDev</span></div>
+  </div>
+</header>
+<main>
+  <h1 class="doc-title">プライバシーポリシー</h1>
+  <div class="doc-title-en">Privacy Policy</div>
+  <div class="doc-meta">最終更新日 / Last updated: 2026年6月2日</div>
 
-    <h1>
-        snaptidify プライバシーポリシー<br>
-        <span style="font-size: 0.75em; color: #666;">Privacy Policy</span>
-    </h1>
+  <p>本プライバシーポリシーは、スマートフォン向けアプリ「Snaptidify」（以下「本アプリ」）における
+  ユーザー情報の取り扱いについて説明するものです。本アプリをご利用になる前に、必ずお読みください。</p>
+  <p class="en">This Privacy Policy explains how user information is handled in the smartphone application
+  "Snaptidify" (the "App"). Please read this policy carefully before using the App.</p>
 
-    <p style="text-align:center; color:#666; font-size:0.9em;">
-        最終更新日 / Last updated: 2026年5月27日
-    </p>
+  <div class="section">
+    <h2>1. 収集する情報 / Information We Collect</h2>
 
-    <p>
-        本プライバシーポリシーは、スマートフォン向けアプリ「snaptidify」（以下、「本アプリ」）における
-        ユーザー情報の取り扱いについて説明するものです。本アプリをご利用になる前に、必ずお読みください。
-    </p>
-    <p class="lang-en">
-        This privacy policy explains how user information is handled in the smartphone application "snaptidify"
-        (hereinafter "this App"). Please read this policy carefully before using the App.
-    </p>
-
-    <!-- ======================================================= -->
-    <h2>1. 収集する情報について / Information We Collect</h2>
-
-    <p><strong>【デバイス上の写真・メディアデータ】</strong><br>
-    本アプリは、写真の表示・整理（フォルダへの移動・削除）を実現するために、以下のシステム権限を要求します。
-    これらのデータは端末内でのみ処理され、<strong>開発者のサーバーや第三者へ送信・収集されることは一切ありません。</strong>
-    </p>
+    <h3>【デバイス上の写真・メディアデータ】</h3>
+    <p>本アプリは、写真の表示・整理（フォルダへの移動・削除）を実現するために以下のシステム権限を要求します。
+    これらのデータは端末内でのみ処理され、外部サーバーや第三者へ送信・収集されることは一切ありません。</p>
     <ul>
-        <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：写真の読み込みと表示に使用します。</li>
-        <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14以降の選択的アクセスに対応するために使用します。</li>
-        <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれた撮影位置情報を保持したまま処理するために使用します。</li>
-        <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐための任意の権限です。この権限はユーザーが設定画面から明示的に許可した場合にのみ有効となります。</li>
+      <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：写真の読み込みと表示</li>
+      <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14 以降の選択的アクセスへの対応</li>
+      <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれたGPS情報を保持したまま処理するため</li>
+      <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐ任意権限。ユーザーが設定画面から明示的に許可した場合にのみ有効</li>
     </ul>
-    <p class="lang-en">
-        <strong>[Device Photos &amp; Media Data]</strong><br>
-        This App requests the following system permissions to display and organize photos (move to folders, delete).
-        These data are processed only on-device and are <strong>NEVER transmitted to the developer's servers or third parties.</strong>
-    </p>
-    <ul class="lang-en" style="color:#555; font-size:0.9em;">
-        <li><strong>Photo/image access</strong> (READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE): Used to read and display photos.</li>
-        <li><strong>Partial photo access</strong> (READ_MEDIA_VISUAL_USER_SELECTED): For selective access on Android 14+.</li>
-        <li><strong>Media location access</strong> (ACCESS_MEDIA_LOCATION): To preserve GPS metadata embedded in photos during processing.</li>
-        <li><strong>Media management</strong> (MANAGE_MEDIA): An optional permission that prevents per-photo system confirmation dialogs during sorting. It is only active when explicitly granted by the user from the in-app settings screen.</li>
-    </ul>
+    <p class="en">[Device Photos &amp; Media Data] The App requests the following permissions to display and organize
+    photos. All data is processed on-device only and is NEVER transmitted externally.</p>
 
-    <p><strong>【アプリ内設定データ】</strong><br>
-    フォルダ情報、自動削除設定、チュートリアル進捗などの設定情報は、端末内のローカルストレージ（SharedPreferences / Room データベース）に保存されます。
-    これらのデータが<strong>開発者のサーバーへ送信されることはありません。</strong>
-    なお、お使いのデバイスでGoogleバックアップが有効な場合、これらの設定データはAndroidの標準機能（Auto Backup）によって
-    ユーザーご自身のGoogleアカウントへバックアップされることがあります（詳細は「3. Android Auto Backup」をご参照ください）。
-    </p>
-    <p class="lang-en">
-        <strong>[In-App Settings Data]</strong><br>
-        Settings such as folder information, auto-delete preferences, and tutorial progress are stored in local storage
-        on your device (SharedPreferences / Room database). This data is <strong>never transmitted to the developer's servers.</strong>
-        If Google Backup is enabled on your device, these settings may be backed up to your own Google Account
-        via Android's standard Auto Backup feature (see Section 3 for details).
-    </p>
+    <h3>【アプリ内設定データ】</h3>
+    <p>フォルダ情報、連続仕分け設定、自動削除設定、チュートリアル進捗、Pro購入状態などの設定情報は、
+    端末内のローカルストレージ（DataStore / Room データベース）にのみ保存されます。
+    これらのデータが外部へ送信されることはありません。</p>
+    <p class="en">[In-App Settings Data] Settings such as folder names, sorting preferences, auto-delete settings,
+    tutorial progress, and Pro purchase status are stored only in local storage (DataStore / Room database) and are
+    never transmitted externally.</p>
 
-    <!-- ======================================================= -->
-    <h2>2. 広告サービスについて / Advertising Services</h2>
+    <h3>【クラッシュレポート・利用統計】</h3>
+    <p>本アプリは、品質向上のために <strong>Firebase Crashlytics</strong> および <strong>Firebase Analytics</strong>
+    （提供：Google LLC）を使用しています。これらのサービスはアプリがクラッシュした際のスタックトレース、
+    デバイス情報（OS バージョン・機種名）、および基本的な利用統計を収集します。
+    個人を特定できる情報は収集されません。</p>
+    <p class="en">[Crash Reports &amp; Usage Statistics] The App uses Firebase Crashlytics and Firebase Analytics
+    (Google LLC) for quality improvement. These services collect crash stack traces, device information, and basic
+    usage statistics. No personally identifiable information is collected.</p>
 
-    <p><strong>【Google AdMob の利用】</strong><br>
-    本アプリは、広告配信のために <strong>Google AdMob</strong>（提供：Google LLC）を使用しています。
-    AdMob は、広告の最適化・配信・不正防止のために以下の情報を収集する場合があります。
-    </p>
+    <h3>【アプリ内購入情報】</h3>
+    <p>Pro版の購入は <strong>Google Play Billing</strong> を通じて処理されます。
+    決済情報はすべて Google が管理し、開発者（BunDev）は決済番号や支払い情報にアクセスすることができません。
+    購入済みかどうかの状態のみを端末内に保存します。</p>
+    <p class="en">[In-App Purchase Information] Pro purchases are processed via Google Play Billing. All payment
+    data is managed by Google. The developer has no access to payment details. Only the purchase state is stored
+    locally on the device.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. 第三者サービスについて / Third-Party Services</h2>
+    <p>本アプリが利用する第三者サービスとそのプライバシーポリシーは以下の通りです。</p>
     <ul>
-        <li>広告識別子（Advertising ID / IDFA）</li>
-        <li>IPアドレス（おおよその位置情報の推定に使用）</li>
-        <li>デバイス情報（OS バージョン、機種名など）</li>
-        <li>アプリの利用状況・インタラクションデータ（広告のクリック・表示状況）</li>
+      <li><strong>Firebase（Google LLC）</strong> – <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+      <li><strong>Google Play Billing（Google LLC）</strong> – <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
     </ul>
-    <p>
-        これらのデータの収集・利用については、Google のプライバシーポリシーが適用されます：
-        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
-    </p>
-    <p>
-        広告識別子はユーザーがいつでもリセットまたは広告のパーソナライズを無効化できます。
-        Android の場合は「設定」→「プライバシー」→「広告」からご確認ください。
-    </p>
-    <p class="lang-en">
-        <strong>[Google AdMob]</strong><br>
-        This App uses <strong>Google AdMob</strong> (provided by Google LLC) for advertising. AdMob may collect the
-        following information for ad optimization, delivery, and fraud prevention:
-    </p>
-    <ul class="lang-en" style="color:#555; font-size:0.9em;">
-        <li>Advertising identifiers (Advertising ID / IDFA)</li>
-        <li>IP address (used to estimate approximate location)</li>
-        <li>Device information (OS version, device model, etc.)</li>
-        <li>App usage and interaction data (ad clicks and impressions)</li>
-    </ul>
-    <p class="lang-en">
-        Google's Privacy Policy applies to the collection and use of this data:
-        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
-        You can reset your Advertising ID or opt out of ad personalization at any time via
-        Android Settings → Privacy → Ads.
-    </p>
+  </div>
 
-    <p><strong>【User Messaging Platform（UMP）による同意管理】</strong><br>
-    本アプリは、欧州経済領域（EEA）・英国・スイスにお住まいのユーザーに対して、
-    Google の <strong>User Messaging Platform（UMP）</strong>を通じて広告に関する同意を取得しています。
-    同意は初回起動時に確認され、アプリの「設定」→「広告の同意設定」からいつでも変更できます。
-    同意が得られない場合、パーソナライズ広告は表示されません。
-    </p>
-    <p class="lang-en">
-        <strong>[Consent Management via User Messaging Platform (UMP)]</strong><br>
-        For users in the European Economic Area (EEA), UK, and Switzerland, this App collects consent for advertising
-        through Google's <strong>User Messaging Platform (UMP)</strong>. Consent is requested at first launch and can
-        be updated at any time via Settings → "Ad Consent Settings". If consent is not granted, personalized ads will
-        not be shown.
-    </p>
-
-    <!-- ======================================================= -->
-    <h2>3. Android Auto Backup（Googleアカウントへのバックアップ）/ Android Auto Backup</h2>
-
-    <p><strong>【バックアップの仕組み】</strong><br>
-    本アプリは、Android の標準機能である <strong>Auto Backup</strong> に対応しています。
-    お使いのデバイスで「Googleへのバックアップ」が有効な場合、以下のデータがユーザーご自身の
-    <strong>Google アカウント（Google ドライブ）</strong>に自動的にバックアップされます。
-    </p>
+  <div class="section">
+    <h2>3. 使用するオープンソースライブラリ / Open-Source Libraries Used</h2>
+    <p>本アプリは以下のオープンソースライブラリを使用しています。これらはユーザーの個人情報を収集しません。</p>
     <ul>
-        <li>フォルダ名・フォルダの色・並び順</li>
-        <li>自動削除の設定日数</li>
-        <li>サクサク仕分けの ON/OFF 設定</li>
-        <li>チュートリアルの完了状態</li>
+      <li><strong>Jetpack Compose</strong> – Android UI フレームワーク（Apache 2.0）</li>
+      <li><strong>Coil</strong> – 画像読み込みライブラリ（Apache 2.0）</li>
+      <li><strong>Koin</strong> – 依存性注入フレームワーク（Apache 2.0）</li>
+      <li><strong>Room</strong> – ローカルデータベース（Apache 2.0）</li>
+      <li><strong>DataStore</strong> – 設定データの永続化（Apache 2.0）</li>
+      <li><strong>Firebase Crashlytics / Analytics</strong> – クラッシュレポート・利用統計（Google）</li>
+      <li><strong>Google Play Billing</strong> – アプリ内課金（Google）</li>
     </ul>
+  </div>
 
-    <div class="note">
-        このバックアップデータは<strong>ユーザーご自身の Google アカウントに保存されるもの</strong>であり、
-        開発者（bunapps）はこのデータに一切アクセスできません。
-        機種変更後に新しい端末でアプリを再インストールすると、これらの設定が自動的に復元されます。
-    </div>
+  <div class="section">
+    <h2>4. データの保持期間 / Data Retention</h2>
+    <p>本アプリがローカルに保存するデータ（フォルダ情報・設定・ゴミ箱の状態管理情報など）は、
+    アプリをアンインストールするまで端末に保持されます。
+    アンインストール後はすべての設定データが削除されますが、写真ファイル自体は Android のメディアストアに残ります。</p>
+    <p class="en">Locally stored data is retained on your device until the App is uninstalled. After uninstallation
+    all settings data is deleted, but photo files themselves remain in the Android MediaStore.</p>
+  </div>
 
-    <p><strong>【バックアップを無効にする場合】</strong><br>
-    Auto Backup を利用したくない場合は、Android の「設定」→「システム」→「バックアップ」から
-    「Google へのバックアップ」をオフにするか、アプリ単位でバックアップ対象から除外することができます。
-    バックアップデータの管理・削除については
-    <a href="https://drive.google.com" target="_blank">Google ドライブ</a> からも行えます。
-    </p>
-    <p>
-        バックアップデータの取り扱いは Google のプライバシーポリシーに従います：
-        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
-    </p>
+  <div class="section">
+    <h2>5. 児童のプライバシー / Children's Privacy</h2>
+    <p>本アプリは 13 歳未満の子供を対象としておらず、意図的に子供の個人情報を収集することはありません。
+    保護者の方が 13 歳未満のお子様が本アプリを使用していることにお気づきの場合は、
+    下記の連絡先までご連絡ください。</p>
+    <p class="en">This App is not directed at children under 13 and does not knowingly collect personal information
+    from children under 13. If a parent or guardian has concerns, please contact us.</p>
+  </div>
 
-    <p class="lang-en">
-        <strong>[How Auto Backup Works]</strong><br>
-        This App supports Android's standard <strong>Auto Backup</strong> feature.
-        If "Backup to Google" is enabled on your device, the following data will be automatically backed up
-        to <strong>your own Google Account (Google Drive)</strong>:
-    </p>
-    <ul class="lang-en" style="color:#555; font-size:0.9em;">
-        <li>Folder names, colors, and sort order</li>
-        <li>Auto-delete setting (number of days)</li>
-        <li>Continuous sorting ON/OFF setting</li>
-        <li>Tutorial completion status</li>
-    </ul>
-    <p class="lang-en">
-        This backup data is stored <strong>in your own Google Account</strong> — the developer (bunapps) has
-        no access to it. When you reinstall the App on a new device, these settings will be automatically restored.<br><br>
-        <strong>[Disabling Auto Backup]</strong><br>
-        To opt out, go to Android Settings → System → Backup and turn off "Back up to Google," or exclude this App
-        individually. Backup data can also be managed or deleted via
-        <a href="https://drive.google.com" target="_blank">Google Drive</a>.<br>
-        Google's Privacy Policy applies to backup data:
-        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
-    </p>
-
-    <!-- ======================================================= -->
-    <h2>4. 使用するオープンソースライブラリ / Open-Source Libraries Used</h2>
-
-    <p>
-        本アプリは以下のオープンソースライブラリを使用していますが、これらはユーザーの個人情報を収集しません。
-        いずれも Apache License 2.0 またはそれぞれのオープンソースライセンスの下で提供されています。
-    </p>
-    <p class="lang-en">
-        This App uses the following open-source libraries, none of which collect personal information.
-        All are provided under the Apache License 2.0 or their respective open-source licenses.
-    </p>
+  <div class="section">
+    <h2>6. 欧州ユーザーの権利（GDPR）/ Your Rights (GDPR)</h2>
+    <p>欧州経済領域（EEA）・英国にお住まいのユーザーは GDPR に基づき以下の権利を有します。</p>
     <ul>
-        <li><strong>Jetpack Compose</strong> – Android UI フレームワーク</li>
-        <li><strong>Coil</strong> – 画像読み込みライブラリ</li>
-        <li><strong>Koin</strong> – 依存性注入フレームワーク</li>
-        <li><strong>Room</strong> – ローカルデータベース</li>
+      <li><strong>アクセス権</strong>：収集された個人データの開示を求める権利</li>
+      <li><strong>削除権</strong>：個人データの削除を求める権利</li>
+      <li><strong>処理の制限権</strong>：特定条件下での処理制限を求める権利</li>
     </ul>
+    <p>Firebase に関するデータについては
+    <a href="https://policies.google.com/privacy" target="_blank">Google のプライバシーポリシー</a>をご参照ください。</p>
+  </div>
 
-    <!-- ======================================================= -->
-    <h2>5. データの保持期間 / Data Retention</h2>
+  <div class="section">
+    <h2>7. プライバシーポリシーの変更 / Changes to This Policy</h2>
+    <p>本ポリシーは、法令の変更やアプリのアップデートに伴い、予告なく変更される場合があります。
+    重要な変更がある場合は、アプリ内またはこのページへの掲載によりお知らせします。
+    変更後のポリシーは本ページに掲載された時点から効力を生じます。</p>
+  </div>
 
-    <p>
-        本アプリがローカルに保存するデータ（フォルダ情報・設定・ゴミ箱の状態管理情報など）は、
-        アプリをアンインストールするまで端末に保持されます。
-        アンインストール後はすべての設定データが端末から削除されますが、写真ファイル自体は Android のメディアストアに残ります。
-    </p>
-    <p>
-        なお、Auto Backup が有効な場合、設定データはアンインストール後もユーザーの Google アカウント上に
-        一定期間保持されることがあります。Google アカウント上のバックアップデータを削除するには、
-        Google ドライブの「バックアップ」セクションからアプリデータを削除してください。
-    </p>
-    <p class="lang-en">
-        Data stored locally by this App (folder names, settings, trash status, etc.) is retained on your device
-        until the App is uninstalled. After uninstallation, all settings data is deleted from the device, but photo
-        files themselves remain in the Android MediaStore.
-    </p>
-    <p class="lang-en">
-        If Auto Backup is enabled, settings data may remain in your Google Account for a period after uninstallation.
-        To delete backup data from your Google Account, go to the "Backups" section in Google Drive and remove
-        the app's backup data.
-    </p>
+  <div class="section">
+    <h2>8. お問い合わせ先 / Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a></p>
+  </div>
 
-    <!-- ======================================================= -->
-    <h2>6. 児童のプライバシー / Children's Privacy</h2>
-
-    <p>
-        本アプリは13歳未満（日本においては13歳未満）の子供を対象としておらず、
-        意図的に子供の個人情報を収集することはありません。
-        万が一、保護者の方が13歳未満のお子様が本アプリを使用していることにお気づきの場合は、
-        下記の連絡先までご連絡ください。
-    </p>
-    <p class="lang-en">
-        This App is not directed at children under the age of 13 and does not knowingly collect personal information
-        from children under 13. If a parent or guardian believes their child under 13 has used this App, please
-        contact us at the address below.
-    </p>
-
-    <!-- ======================================================= -->
-    <h2>7. ユーザーの権利（GDPRへの対応）/ Your Rights (GDPR)</h2>
-
-    <p>
-        欧州経済領域（EEA）・英国にお住まいのユーザーは、GDPR に基づき以下の権利を有します。
-    </p>
-    <ul>
-        <li><strong>アクセス権</strong>：収集された個人データの開示を求める権利</li>
-        <li><strong>削除権</strong>：個人データの削除を求める権利（いわゆる「忘れられる権利」）</li>
-        <li><strong>処理の制限権</strong>：特定条件下で個人データの処理を制限する権利</li>
-        <li><strong>同意の撤回権</strong>：広告同意はアプリ設定画面からいつでも撤回可能です</li>
-    </ul>
-    <p>
-        本アプリ自体が個人情報を開発者サーバーへ送信することはありませんが、AdMob に関するデータについては
-        <a href="https://policies.google.com/privacy" target="_blank">Google のプライバシーポリシー</a>
-        および <a href="https://adssettings.google.com/" target="_blank">Google 広告設定</a> をご参照ください。
-    </p>
-    <p class="lang-en">
-        Users in the EEA and UK have the following rights under the GDPR:
-    </p>
-    <ul class="lang-en" style="color:#555; font-size:0.9em;">
-        <li><strong>Right of access</strong>: Request disclosure of collected personal data.</li>
-        <li><strong>Right to erasure</strong>: Request deletion of personal data ("right to be forgotten").</li>
-        <li><strong>Right to restriction</strong>: Restrict processing of personal data under certain conditions.</li>
-        <li><strong>Right to withdraw consent</strong>: Ad consent can be withdrawn at any time from in-app Settings.</li>
-    </ul>
-    <p class="lang-en">
-        As this App itself does not transmit personal data to the developer's servers, for data related to AdMob please refer to
-        <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> and
-        <a href="https://adssettings.google.com/" target="_blank">Google Ad Settings</a>.
-    </p>
-
-    <!-- ======================================================= -->
-    <h2>8. プライバシーポリシーの変更 / Changes to This Policy</h2>
-
-    <p>
-        本ポリシーは、法令の変更やアプリのアップデートに伴い、予告なく変更される場合があります。
-        重要な変更がある場合は、アプリ内またはこのページへの掲載によりお知らせします。
-        変更後のプライバシーポリシーは、本ページに掲載された時点から効力を生じるものとします。
-    </p>
-    <p class="lang-en">
-        This policy may be updated without prior notice due to changes in laws or app updates.
-        For significant changes, we will notify users via the App or this page.
-        The updated policy takes effect from the time it is posted on this page.
-    </p>
-
-    <!-- ======================================================= -->
-    <h2>9. お問い合わせ先 / Contact</h2>
-
-    <p>
-        本プライバシーポリシーに関するご質問・ご意見は、下記までお気軽にご連絡ください。
-    </p>
-    <p class="lang-en">
-        If you have any questions or concerns about this privacy policy, please contact us:
-    </p>
-    <p>
-        <strong>Email:</strong>
-        <a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a>
-    </p>
-
-    <div class="date-line">
-        <p>
-            <strong>初版制定日 / First established:</strong> 2026年5月6日<br>
-            <strong>最終更新日 / Last updated:</strong> 2026年5月27日
-        </p>
-    </div>
-
+  <div class="doc-footer">
+    <p>初版制定日：2026年5月6日　／　最終更新日：2026年6月2日</p>
+    <p>屋号：BunDev</p>
+  </div>
+</main>
 </body>
 </html>
