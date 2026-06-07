@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Snaptidify – プライバシーポリシー</title>
+<title>Snaptidify – プライバシーポリシー / Privacy Policy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
@@ -108,7 +108,7 @@
 <main>
   <h1 class="doc-title">プライバシーポリシー</h1>
   <div class="doc-title-en">Privacy Policy</div>
-  <div class="doc-meta">最終更新日 / Last updated: 2026年6月2日</div>
+  <div class="doc-meta">最終更新日 / Last updated: 2026年6月8日</div>
 
   <p>本プライバシーポリシーは、スマートフォン向けアプリ「Snaptidify」（以下「本アプリ」）における
   ユーザー情報の取り扱いについて説明するものです。本アプリをご利用になる前に、必ずお読みください。</p>
@@ -118,49 +118,55 @@
   <div class="section">
     <h2>1. 収集する情報 / Information We Collect</h2>
 
-    <h3>【デバイス上の写真・メディアデータ】</h3>
+    <h3>【デバイス上の写真・メディアデータ】Photo &amp; Media Data on Device</h3>
     <p>本アプリは、写真の表示・整理（フォルダへの移動・削除）を実現するために以下のシステム権限を要求します。
     これらのデータは端末内でのみ処理され、外部サーバーや第三者へ送信・収集されることは一切ありません。</p>
+    <p class="en">The App requests the following permissions solely to display and organize your photos.
+    All data is processed on-device only and is <strong>never</strong> transmitted to any external server or third party.</p>
     <ul>
-      <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：写真の読み込みと表示</li>
-      <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14 以降の選択的アクセスへの対応</li>
-      <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれたGPS情報を保持したまま処理するため</li>
-      <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐ任意権限。ユーザーが設定画面から明示的に許可した場合にのみ有効</li>
+      <li><strong>写真・画像へのアクセス権限</strong>（READ_MEDIA_IMAGES）：写真の読み込みと表示<br>
+        <span class="en">READ_MEDIA_IMAGES — Read and display photos (Android 10+)</span></li>
+      <li><strong>外部ストレージ読み書き権限</strong>（READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE、Android 9以下）：Android 9以下の端末での写真の読み込みと移動操作<br>
+        <span class="en">READ/WRITE_EXTERNAL_STORAGE — Photo access on Android 9 (API 28) and below only</span></li>
+      <li><strong>写真の部分アクセス権限</strong>（READ_MEDIA_VISUAL_USER_SELECTED）：Android 14 以降の選択的アクセスへの対応<br>
+        <span class="en">READ_MEDIA_VISUAL_USER_SELECTED — Selective photo access on Android 14+</span></li>
+      <li><strong>メディア位置情報のアクセス権限</strong>（ACCESS_MEDIA_LOCATION）：写真に埋め込まれたGPS情報を保持したまま処理するため<br>
+        <span class="en">ACCESS_MEDIA_LOCATION — Preserve embedded GPS metadata when moving photos</span></li>
+      <li><strong>メディア管理権限</strong>（MANAGE_MEDIA）：仕分け操作のたびにシステム確認ダイアログが表示されることを防ぐ任意権限。ユーザーが設定画面から明示的に許可した場合にのみ有効<br>
+        <span class="en">MANAGE_MEDIA — Optional permission to suppress per-photo system confirmation dialogs; only activated when explicitly granted by the user in Settings</span></li>
     </ul>
-    <p class="en">[Device Photos &amp; Media Data] The App requests the following permissions to display and organize
-    photos. All data is processed on-device only and is NEVER transmitted externally.</p>
 
-    <h3>【アプリ内設定データ】</h3>
+    <h3>【アプリ内設定データ】In-App Settings Data</h3>
     <p>フォルダ情報、連続仕分け設定、自動削除設定、チュートリアル進捗、Pro購入状態などの設定情報は、
     端末内のローカルストレージ（DataStore / Room データベース）にのみ保存されます。
     これらのデータが外部へ送信されることはありません。</p>
-    <p class="en">[In-App Settings Data] Settings such as folder names, sorting preferences, auto-delete settings,
-    tutorial progress, and Pro purchase status are stored only in local storage (DataStore / Room database) and are
+    <p class="en">Settings such as folder names, sorting preferences, auto-delete settings,
+    tutorial progress, and Pro purchase status are stored only in local storage (DataStore / Room database) on your device and are
     never transmitted externally.</p>
 
-    <h3>【クラッシュレポート・利用統計】</h3>
+    <h3>【クラッシュレポート・利用統計】Crash Reports &amp; Usage Statistics</h3>
     <p>本アプリは、品質向上のために <strong>Firebase Crashlytics</strong> および <strong>Firebase Analytics</strong>
     （提供：Google LLC）を使用しています。これらのサービスはアプリがクラッシュした際のスタックトレース、
-    デバイス情報（OS バージョン・機種名）、および基本的な利用統計を収集します。
+    デバイス情報（OSバージョン・機種名）、および基本的な利用統計を収集します。
     個人を特定できる情報は収集されません。</p>
-    <p class="en">[Crash Reports &amp; Usage Statistics] The App uses Firebase Crashlytics and Firebase Analytics
-    (Google LLC) for quality improvement. These services collect crash stack traces, device information, and basic
-    usage statistics. No personally identifiable information is collected.</p>
+    <p class="en">The App uses Firebase Crashlytics and Firebase Analytics (by Google LLC) to improve quality.
+    These services collect crash stack traces, device information (OS version, device model), and basic usage statistics.
+    No personally identifiable information is collected.</p>
 
-    <h3>【アプリ内購入情報】</h3>
+    <h3>【アプリ内購入情報】In-App Purchase Information</h3>
     <p>Pro版の購入は <strong>Google Play Billing</strong> を通じて処理されます。
     決済情報はすべて Google が管理し、開発者（BunDev）は決済番号や支払い情報にアクセスすることができません。
     購入済みかどうかの状態のみを端末内に保存します。</p>
-    <p class="en">[In-App Purchase Information] Pro purchases are processed via Google Play Billing. All payment
-    data is managed by Google. The developer has no access to payment details. Only the purchase state is stored
-    locally on the device.</p>
+    <p class="en">Pro purchases are processed via Google Play Billing. All payment data is managed by Google.
+    The developer (BunDev) has no access to any payment details. Only the purchase status is stored locally on the device.</p>
   </div>
 
   <div class="section">
     <h2>2. 第三者サービスについて / Third-Party Services</h2>
     <p>本アプリが利用する第三者サービスとそのプライバシーポリシーは以下の通りです。</p>
+    <p class="en">The App uses the following third-party services, each governed by their own privacy policies:</p>
     <ul>
-      <li><strong>Firebase（Google LLC）</strong> – <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+      <li><strong>Firebase Crashlytics / Analytics（Google LLC）</strong> – <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
       <li><strong>Google Play Billing（Google LLC）</strong> – <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
     </ul>
   </div>
@@ -168,12 +174,14 @@
   <div class="section">
     <h2>3. 使用するオープンソースライブラリ / Open-Source Libraries Used</h2>
     <p>本アプリは以下のオープンソースライブラリを使用しています。これらはユーザーの個人情報を収集しません。</p>
+    <p class="en">The App uses the following open-source libraries. None of them collect personal information.</p>
     <ul>
       <li><strong>Jetpack Compose</strong> – Android UI フレームワーク（Apache 2.0）</li>
       <li><strong>Coil</strong> – 画像読み込みライブラリ（Apache 2.0）</li>
       <li><strong>Koin</strong> – 依存性注入フレームワーク（Apache 2.0）</li>
       <li><strong>Room</strong> – ローカルデータベース（Apache 2.0）</li>
       <li><strong>DataStore</strong> – 設定データの永続化（Apache 2.0）</li>
+      <li><strong>Reorderable</strong> – ドラッグ並び替えライブラリ（Apache 2.0）</li>
       <li><strong>Firebase Crashlytics / Analytics</strong> – クラッシュレポート・利用統計（Google）</li>
       <li><strong>Google Play Billing</strong> – アプリ内課金（Google）</li>
     </ul>
@@ -184,8 +192,8 @@
     <p>本アプリがローカルに保存するデータ（フォルダ情報・設定・ゴミ箱の状態管理情報など）は、
     アプリをアンインストールするまで端末に保持されます。
     アンインストール後はすべての設定データが削除されますが、写真ファイル自体は Android のメディアストアに残ります。</p>
-    <p class="en">Locally stored data is retained on your device until the App is uninstalled. After uninstallation
-    all settings data is deleted, but photo files themselves remain in the Android MediaStore.</p>
+    <p class="en">Locally stored data (folder info, settings, trash status, etc.) is retained on your device until the App is uninstalled.
+    After uninstallation all settings data is deleted, but photo files themselves remain in the Android MediaStore.</p>
   </div>
 
   <div class="section">
@@ -194,19 +202,21 @@
     保護者の方が 13 歳未満のお子様が本アプリを使用していることにお気づきの場合は、
     下記の連絡先までご連絡ください。</p>
     <p class="en">This App is not directed at children under 13 and does not knowingly collect personal information
-    from children under 13. If a parent or guardian has concerns, please contact us.</p>
+    from children under 13. If a parent or guardian has concerns, please contact us using the information below.</p>
   </div>
 
   <div class="section">
     <h2>6. 欧州ユーザーの権利（GDPR）/ Your Rights (GDPR)</h2>
     <p>欧州経済領域（EEA）・英国にお住まいのユーザーは GDPR に基づき以下の権利を有します。</p>
+    <p class="en">Users in the European Economic Area (EEA) and the United Kingdom have the following rights under the GDPR:</p>
     <ul>
-      <li><strong>アクセス権</strong>：収集された個人データの開示を求める権利</li>
-      <li><strong>削除権</strong>：個人データの削除を求める権利</li>
-      <li><strong>処理の制限権</strong>：特定条件下での処理制限を求める権利</li>
+      <li><strong>アクセス権 / Right of Access</strong>：収集された個人データの開示を求める権利</li>
+      <li><strong>削除権 / Right to Erasure</strong>：個人データの削除を求める権利</li>
+      <li><strong>処理の制限権 / Right to Restriction</strong>：特定条件下での処理制限を求める権利</li>
     </ul>
     <p>Firebase に関するデータについては
-    <a href="https://policies.google.com/privacy" target="_blank">Google のプライバシーポリシー</a>をご参照ください。</p>
+    <a href="https://policies.google.com/privacy" target="_blank">Google のプライバシーポリシー</a>をご参照ください。<br>
+    <span class="en">For data processed by Firebase, please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</span></p>
   </div>
 
   <div class="section">
@@ -214,6 +224,9 @@
     <p>本ポリシーは、法令の変更やアプリのアップデートに伴い、予告なく変更される場合があります。
     重要な変更がある場合は、アプリ内またはこのページへの掲載によりお知らせします。
     変更後のポリシーは本ページに掲載された時点から効力を生じます。</p>
+    <p class="en">This policy may be updated without prior notice due to legal changes or app updates.
+    Material changes will be announced in the App or on this page.
+    Updated policies take effect upon publication on this page.</p>
   </div>
 
   <div class="section">
@@ -222,7 +235,7 @@
   </div>
 
   <div class="doc-footer">
-    <p>初版制定日：2026年5月6日　／　最終更新日：2026年6月2日</p>
+    <p>初版制定日：2026年5月6日　／　最終更新日：2026年6月8日</p>
     <p>屋号：BunDev</p>
   </div>
 </main>
